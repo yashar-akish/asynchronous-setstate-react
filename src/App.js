@@ -15,10 +15,20 @@ class App extends React.Component {
    * synchronous format : you will see in console.log it is one step behind
    */
 
-  handleClick = () => {
-    this.setState({ meaningOfLife: this.state.meaningOfLife + 1 });
-    console.log(this.state.meaningOfLife);
-  };
+  // handleClick = () => {
+  //   this.setState({ meaningOfLife: this.state.meaningOfLife + 1 });
+  //   console.log(this.state.meaningOfLife);
+  // };
+
+    /**
+   * Asynchronous format : using a function instead of having object in  this.setState()
+   */
+     handleClick = () => {
+      this.setState((prevState, prevProps) => {
+        return {meaningOfLife: prevState.meaningOfLife + 1}
+      },
+        ()=> console.log(this.state.meaningOfLife))
+    }
 
   render() {
     return (
