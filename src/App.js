@@ -3,12 +3,16 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends React.Component {
-  constructor() {
-    super();
+  // constructor() {
+  //   super();
 
-    this.state = {
-      meaningOfLife: 47,
-    };
+  //   this.state = {
+  //     meaningOfLife: 47,
+  //   };
+  // }
+
+  state= {
+    meaningOfLife: 47,
   }
 
   /**
